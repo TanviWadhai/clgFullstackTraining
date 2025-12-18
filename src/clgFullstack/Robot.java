@@ -1,6 +1,6 @@
 package clgFullstack;
 
-public class Robot {
+class RobotApp {
 	
 	String Brand="Fanuc";
 	String os="Linux";
@@ -14,5 +14,20 @@ public class Robot {
 	}
 
 }
+public class Robot {
+	public static void main(String[] args) {
+		
+		RobotApp r1=new RobotApp();
+		r1.Fight();
+		RobotApp r2=new RobotApp();
+		r2.walk();
+		
+		Car c1=new Car();
+		c1.run();
+		Car c2=new Car();
+		c2.stop();
+	}
+}
+
 
 
