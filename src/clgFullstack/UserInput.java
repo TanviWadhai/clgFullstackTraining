@@ -59,5 +59,5 @@ public class UserInput {
 		
        System.out.println("Your data is completed");
 	}
-
+	
 }

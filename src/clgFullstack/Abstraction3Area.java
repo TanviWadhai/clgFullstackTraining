@@ -55,5 +55,4 @@ public class Abstraction3Area {
 		s.findArea();
 		s.DispArea();
 	}
-
 }
