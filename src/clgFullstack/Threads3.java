@@ -27,7 +27,7 @@ class Typingg1 implements Runnable{
 		for(int i=0;i<10;i++) {
 			System.out.println("typing.....");
 			try {
-				Thread.sleep(3000);
+				Thread.sleep(1000);
 			}catch (Exception e){
 				e.printStackTrace();
 			}
@@ -41,7 +41,7 @@ class SpellCheckk1 implements Runnable{
 		for(int i=0;i<10;i++) {
 			System.out.println(" SpellCheck.....");
 			try {
-				Thread.sleep(3000);
+				Thread.sleep(1000);
 			}catch (Exception e){
 				e.printStackTrace();
 			}
@@ -55,7 +55,7 @@ class Savingg1 implements Runnable{
 		for(int i=0;i<10;i++) {
 			System.out.println("saving.....");
 			try {
-				Thread.sleep(3000);
+				Thread.sleep(1000);
 			}catch (Exception e){
 				e.printStackTrace();
 			}
