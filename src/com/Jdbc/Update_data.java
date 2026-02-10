@@ -2,21 +2,22 @@ package com.Jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Scanner;
 
-public class CreateTable {
+public class Update_data {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		String url="jdbc:mysql://localhost:3306/Students";
+		
 		String user="root";
 		String pass="Tanvi02";
-		//for create table
-//		String sql="create table phone(id int primary key,brand varchar(20),price int)"; 
 		
-		//insert values in table
-		String sql="insert into phone values (11,'nokia',1200),(12,'samsung',20000),(13,'oppo',13000),(14,'iphone',100000) ";  
+		//get data 
+		String query="update phone set price=500000 where id = 11";
 		
 		// loading the driver
 		Class.forName("com.mysql.cj.jdbc.Driver");
@@ -26,11 +27,16 @@ public class CreateTable {
 		Connection con=DriverManager.getConnection(url, user, pass);
 		System.out.println("connection established successfully");
 		
-		//create statement 
 		Statement st=con.createStatement();
-		int i=st.executeUpdate(sql) ;
-		System.out.println(i+"row affected");
+		int rs=st.executeUpdate(query);  
+	
+		System.out.println("data get successfully");
 		
+		//close the statement and connection
+		
+		con.close();
+		System.out.println("Connection Closed......");		
+
 	}
 
 }
